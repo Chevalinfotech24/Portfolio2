@@ -3,56 +3,37 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    position: relative;
     flex-direction: column;
-    /* Stack elements vertically */
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.card-container {
+    overflow: hidden;
+    width: 300px;
+    /* Adjust to card width */
+}
+
+.card-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
 }
 
 .card--recipe {
-    margin-top: -50px;
-    position: relative;
+    min-width: 300px;
+    /* Match container width */
     width: 300px;
     height: 450px;
     border-radius: 12px;
     box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.04), 0 7px 18px 0 rgba(0, 0, 0, 0.05), 0 12px 24px 0 rgba(0, 0, 0, 0.08);
     transition: box-shadow 0.25s ease;
     cursor: pointer;
-    margin: 20px;
-}
-
-.navigation-buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    /* Space above buttons */
-}
-
-.navigation-buttons button {
-    color: white;
-    border: none;
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
-    font-weight: bold;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    margin: 0 10px;
-    /* Space between buttons */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.navigation-buttons button:hover {
-    background-color: #10cade;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.navigation-buttons button:active {
-    background-color: #10cade;
+    margin-right: 20px;
+    /* Space between cards */
+    overflow: hidden;
+    position: relative;
 }
 
 .card--recipe__img {
@@ -62,7 +43,6 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 12px;
-    -o-object-fit: cover;
     object-fit: cover;
 }
 
@@ -73,8 +53,6 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 12px;
-    -o-object-fit: cover;
-    object-fit: cover;
     z-index: 1;
     overflow: hidden;
 }
@@ -82,10 +60,11 @@ body {
 .card--recipe__video video {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
     object-fit: cover;
     transition: all 0.2s ease;
     opacity: 0;
+    transform: scale(1);
+    /* Prevent shrinking */
 }
 
 .card--recipe::before {
@@ -95,7 +74,6 @@ body {
     width: 100%;
     top: 50%;
     right: 0;
-    background: black;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 100%);
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
@@ -162,20 +140,57 @@ body {
 
 .card--recipe.is--playing video {
     opacity: 1;
+    transform: scale(1);
+    /* Maintain size during play */
 }
 
-.card--recipe[data-tilt] {
-    transform-style: preserve-3d;
+.navigation-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-.card--recipe[data-tilt] .card--recipe__play {
-    transform: translateZ(20px);
+.navigation-buttons button {
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.card--recipe[data-tilt] .card--recipe__content {
-    transform: translateZ(20px);
+.navigation-buttons button:hover {
+    background-color: #10cade;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.card--recipe[data-tilt]:hover {
-    box-shadow: 0 12px 18px 0 rgba(0, 0, 0, 0.08), 0 8px 18px 0 rgba(0, 0, 0, 0.08), 0 19px 28px 0 rgba(0, 0, 0, 0.1);
+.navigation-buttons button:active {
+    background-color: #10cade;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .card-container {
+        width: 250px;
+        /* Adjust to smaller screens */
+    }
+    .card--recipe {
+        width: 250px;
+        height: 400px;
+    }
+    .navigation-buttons button {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
 }

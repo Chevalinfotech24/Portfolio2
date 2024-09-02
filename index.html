@@ -3,98 +3,75 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>CodePen - Recipe card</title>
+    <title>Responsive Card Slider</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="./style.css">
-
 </head>
 
 <body>
-    <!-- partial:index.partial.html -->
+    <div class="card-container">
+        <div class="card-wrapper">
+            <!-- Card 1 -->
+            <div class="card--recipe" data-tilt data-tilt-perspective="900" data-tilt-max="5" data-tilt-easing="cubic-bezier(.1,.22,.49,.95)">
+                <img class="card--recipe__img" src="https://github.com/Chevalinfotech24/Portfolio/blob/main/Chevalw.jpg?raw=true" />
+                <div class="card--recipe__video">
+                    <video preload="none" src="https://github.com/Chevalinfotech24/Portfolio/raw/main/Chevalw.mp4" loop muted="muted"></video>
+                </div>
+                <div class="card--recipe__play">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/372262/Play.svg" />
+                </div>
+                <div class="card--recipe__content">
+                    <h3 class="card--recipe__title">Cheval <br />Infomatics</h3>
+                    <ul class="card--recipe__labels">
+                        <li class="card--recipe__label-category">Website</li>
+                    </ul>
+                </div>
+            </div>
 
+            <!-- Card 2 -->
+            <div class="card--recipe" data-tilt data-tilt-perspective="900" data-tilt-max="5" data-tilt-easing="cubic-bezier(.1,.22,.49,.95)">
+                <img class="card--recipe__img" src="https://github.com/Chevalinfotech24/Portfolio/blob/main/medicare.png?raw=true" />
+                <div class="card--recipe__video">
+                    <video preload="none" src="https://github.com/Chevalinfotech24/Portfolio/raw/main/medicare.mp4" loop muted="muted"></video>
+                </div>
+                <div class="card--recipe__play">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/372262/Play.svg" />
+                </div>
+                <div class="card--recipe__content">
+                    <h3 class="card--recipe__title">Medicare <br />Bot</h3>
+                    <ul class="card--recipe__labels">
+                        <li class="card--recipe__label-category">AI/ML</li>
+                        <li class="card--recipe__label">2 pers</li>
+                    </ul>
+                </div>
+            </div>
 
-    <div class="card--recipe" data-tilt data-tilt-perspective="900" data-tilt-max="5" data-tilt-easing="cubic-bezier(.1,.22,.49,.95)">
-        <img class="card--recipe__img" src="https://github.com/Chevalinfotech24/Portfolio/blob/main/Chevalw.jpg?raw=true" />
-
-        <div class="card--recipe__video">
-            <video preload="none" src="https://github.com/Chevalinfotech24/Portfolio/raw/main/Chevalw.mp4" loop muted="muted"></video>
+            <!-- Card 3 -->
+            <div class="card--recipe" data-tilt data-tilt-perspective="900" data-tilt-max="5" data-tilt-easing="cubic-bezier(.1,.22,.49,.95)">
+                <img class="card--recipe__img" src="https://github.com/Chevalinfotech24/Portfolio/blob/main/bluebird.jpg?raw=true" />
+                <div class="card--recipe__video">
+                    <video preload="none" src="https://github.com/Chevalinfotech24/Portfolio/raw/main/bluebird.mp4" loop muted="muted"></video>
+                </div>
+                <div class="card--recipe__play">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/372262/Play.svg" />
+                </div>
+                <div class="card--recipe__content">
+                    <h3 class="card--recipe__title">Bluebird <br />Nursing Home</h3>
+                    <ul class="card--recipe__labels">
+                        <li class="card--recipe__label-category">Website</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-
-        <div class="card--recipe__play">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/372262/Play.svg" />
-        </div>
-
-        <div class="card--recipe__content">
-            <h3 class="card--recipe__title">Cheval <br />Infomatics</h3>
-            <ul class="card--recipe__labels">
-                <li class="card--recipe__label-category">
-                    Website
-                </li>
-
-
-            </ul>
-        </div>
-    </div>
-
-    <div class="card--recipe" data-tilt data-tilt-perspective="900" data-tilt-max="5" data-tilt-easing="cubic-bezier(.1,.22,.49,.95)">
-        <img class="card--recipe__img" src="https://github.com/Chevalinfotech24/Portfolio/blob/main/medicare.png?raw=true" />
-
-        <div class="card--recipe__video">
-            <video preload="none" src="https://github.com/Chevalinfotech24/Portfolio/raw/main/medicare.mp4" loop muted="muted"></video>
-        </div>
-
-        <div class="card--recipe__play">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/372262/Play.svg" />
-        </div>
-
-        <div class="card--recipe__content">
-            <h3 class="card--recipe__title">Medicare <br />Bot</h3>
-            <ul class="card--recipe__labels">
-                <li class="card--recipe__label-category">
-                    AI/ML
-                </li>
-                <li class="card--recipe__label">
-                    2 pers
-                </li>
-
-            </ul>
-        </div>
-    </div>
-
-    <div class="card--recipe" data-tilt data-tilt-perspective="900" data-tilt-max="5" data-tilt-easing="cubic-bezier(.1,.22,.49,.95)">
-        <img class="card--recipe__img" src="https://github.com/Chevalinfotech24/Portfolio/blob/main/bluebird.jpg?raw=true" />
-
-        <div class="card--recipe__video">
-            <video preload="none" src="https://github.com/Chevalinfotech24/Portfolio/raw/main/bluebird.mp4" loop muted="muted"></video>
-        </div>
-
-        <div class="card--recipe__play">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/372262/Play.svg" />
-        </div>
-
-        <div class="card--recipe__content">
-            <h3 class="card--recipe__title">Bluebird <br />Nursing Home</h3>
-            <ul class="card--recipe__labels">
-                <li class="card--recipe__label-category">
-                    Website
-                </li>
-
-
-            </ul>
-        </div>
-
     </div>
 
     <div class="navigation-buttons">
         <button class="prev-button">◀️</button>
         <button class="next-button">▶️</button>
     </div>
-
-    <!-- partial -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
     <script src="./script.js"></script>
-
 </body>
 
 </html>
